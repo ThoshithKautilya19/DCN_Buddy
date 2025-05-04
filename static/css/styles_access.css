@@ -1,0 +1,79 @@
+body, h1, p, div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: blue;
+}
+
+.heading{
+    width:90%;
+    background-color: black;
+    margin: 20px;
+    padding: 10px;
+}
+
+.inter{
+    width: 100%;
+    height: 1000px;
+    margin: 0;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-content: space-between ;
+    justify-content: space-evenly;
+    background-color: bisque;
+}
+
+.desc{
+    margin:30px;
+    background-color: aquamarine;
+
+}
+
+.options{
+    width:70%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 30px;
+    padding: 10px;
+    background-color: aqua;
+
+}
+
+/* styles.css */
+
+/* Resetting default browser styles */
+input[type="submit"] {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Button styles */
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Primary color */
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* Darker shade of primary color on hover */
+}
+
+.submit-button:active {
+    transform: translateY(0.5px); /* Add subtle press effect */
+}

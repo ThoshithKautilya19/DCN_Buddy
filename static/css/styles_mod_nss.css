@@ -1,0 +1,134 @@
+#bod{
+    position: relative;
+    background-color: red;
+    max-height: auto;
+}
+
+.container{
+    max-height: 1000px;
+}
+.box1{
+    color: antiquewhite;
+    position: relative;
+    top: -20px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+.box-3{
+    margin: 0px;
+    position: relative; 
+    left: 10px;
+    top: 0px;
+    max-width: 20%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+
+.submit-button{
+    max-width: 120%;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px;
+}
+
+
+.submit-button:hover{
+    background-color: rgb(197, 129, 2);
+}
+
+#mod{
+    background-color: rgb(197, 129, 2);
+}
+
+.box2{
+    margin: 0px;
+    max-width: 75%;
+    top: -550px;
+    position: relative;
+    left: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desc{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    background-color: f4cd07 ;
+}
+/* .router_para,.op_mux_para,.serv_det{
+
+    left: 30px;
+    display: flex;
+    padding: 20px;
+    max-width: 80%;
+    background-color: black;
+    color: white;
+    margin: 32px;
+    flex-wrap: wrap;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Helvetica;
+} */
+
+.dcn_para,.router_para,.op_mux_para,.serv_det{
+    left: 30px;
+    margin: 0px;
+    background-color: antiquewhite;
+    padding-bottom: 3px;
+}
+
+.textfields{
+    position: relative;
+    left: 0px;
+    padding: 15px;
+    max-width: 100%;
+    background-color: rgb(238,41,57);
+    color: antiquewhite;
+    margin: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Helvetica;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.tb{
+
+    margin: 10px;
+    padding: 3px;
+}
+
+.tb {
+    flex: 0 0 200px; /* Equal width for all columns */
+    margin: 0 10px 10px 0; /* Margin between and around columns */
+}
+
+label {
+    display: block; /* Ensure labels are block-level elements */
+    margin-bottom: 10px; /* Add some spacing between label and input */
+}
+
+input {
+    max-width:100%; /* Make input fields fill the available space */
+}
+
+#sd{
+    background-color: antiquewhite;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}

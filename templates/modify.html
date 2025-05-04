@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Nodes</title>
+    <link rel="stylesheet" href="\static\css\styles_mod.css">
+</head>
+<body id="bod" >
+                <div class="container">
+                    <div class="box1">
+                    <h1>VI dcn buddy </h1>
+                    </div>
+                    <div class="box-3">
+                            <div class="add">
+                            <form action="/add" method="POST"> 
+                                <input type="submit" name="add" value="Add            " class="submit-button" id="add">
+                                {% if circle is defined %}
+                                <input type="hidden" name="circle" value="{{ circle }}">
+                                <input type="hidden" name="user" value="{{ user }}">
+                        
+                                {% else %}
+                                <input type="hidden" name="circle" value="">
+                                <input type="hidden" name="user" value="">
+                                {% endif %}    
+                            </form>
+                            </div>
+                        
+                            <div class="del">
+                            <form action="/del" method="POST"> 
+                                <input type="submit" name= "del" value="Delete      " class="submit-button" id="del">
+                                {% if circle is defined %}
+                                <input type="hidden" name="circle" value="{{ circle }}">
+                                <input type="hidden" name="user" value="{{ user }}">
+                        
+                                {% else %}
+                                <input type="hidden" name="circle" value="">
+                                <input type="hidden" name="user" value="">
+                                {% endif %}    
+                            </form>
+                            </div>
+                            
+                            <div class="mod">
+                            <form action="/modify" method="POST"> 
+                                <input type="submit" name= "mod" value="Modify      " class="submit-button" id="mod">
+                                {% if circle is defined %}
+                                <input type="hidden" name="circle" value="{{ circle }}">
+                                <input type="hidden" name="user" value="{{ user }}">
+                        
+                                {% else %}
+                                <input type="hidden" name="circle" value="">
+                                <input type="hidden" name="user" value="">
+                                {% endif %}    
+                            </form>
+                            </div>
+                            
+                            <div class="sea">
+                            <form action="/search" method="POST"> 
+                                <input type="submit" name= "search" value="View Node" class="submit-button" id="sea">
+                                {% if circle is defined %}
+                                <input type="hidden" name="circle" value="{{ circle }}">
+                                <input type="hidden" name="user" value="{{ user }}">
+                        
+                                {% else %}
+                                <input type="hidden" name="circle" value="">
+                                <input type="hidden" name="user" value="">
+                                {% endif %}    
+                            </form>
+                            </div>
+                            
+                            <div class="up">
+                            <form action="/upload" method="POST"> 
+                                <input type="submit" name= "upload" value="Upload      " class="submit-button" id="up">
+                                {% if circle is defined %}
+                                <input type="hidden" name="circle" value="{{ circle }}">
+                                <input type="hidden" name="user" value="{{ user }}">
+                        
+                                {% else %}
+                                <input type="hidden" name="circle" value="">
+                                <input type="hidden" name="user" value="">
+                                {% endif %}    
+                            </form>
+                            <div class="expo">
+                                <form action="/export" method="POST">
+                                    <input type="submit" name="export" value="Download " class="submit-button" id="exp">
+                                    {% if circle is defined %}
+                                    <input type="hidden" name="circle" value="{{ circle }}">
+                                    <input type="hidden" name="user" value="{{ user }}">
+                            
+                                    {% else %}
+                                    <input type="hidden" name="circle" value="">
+                                    <input type="hidden" name="user" value="">
+                                    {% endif %}   
+                                </form>
+                            </div>
+                            <div class="logout">
+                                <form action="/logout" method="POST">
+                                    <input type="submit" name="logout" value="Logout      " class="submit-button">
+                                    {% if circle%}
+                                    <input type="hidden" name="circle" value="{{circle}}">
+                                    <input type="hidden" name="user" value="{{user}}">
+                                    {%endif%}
+                                </form>
+                                </div>
+
+                                <div class="admin">
+                                    <form action="/admin_access" method="POST">
+                                        <input type="submit" name="admin" value="Admin        " class="submit-button">
+                                        {% if circle%}
+                                        <input type="hidden" name="circle" value="{{circle}}">
+                                        <input type="hidden" name="user" value="{{user}}">
+                                        {%endif%}
+                                    </form>
+                                </div>    
+                            </div>
+                    </div>
+                    <div class="box2">
+                        <div class="search">
+                        <form action="/mod_search" method="POST">
+                            <label for="search_nss_id"> Search using NSS ID</label>
+                            <input type="text" name="search_nss_id" id="nss_search">
+                            <input type="submit" value="Search"  class="submit-button">
+                            {% if circle is defined %}
+                            <input type="hidden" name="circle" value="{{ circle }}">
+                            <input type="hidden" name="user" value="{{ user }}">
+                    
+                            {% else %}
+                            <input type="hidden" name="circle" value="">
+                            <input type="hidden" name="user" value="">
+                            {% endif %}   
+                        </form>
+                        </div>
+
+                        <div class="search">
+                        <form action="/mod_search" method="POST">
+                            <label for="search_name"> Search using Node Name</label>
+                            <input type="text" name="search_name" id="name_search">
+                            <input type="submit" value="Search" class="submit-button">
+                            {% if circle is defined %}
+                            <input type="hidden" name="circle" value="{{ circle }}">
+                            <input type="hidden" name="user" value="{{ user }}">
+                    
+                            {% else %}
+                            <input type="hidden" name="circle" value="">
+                            <input type="hidden" name="user" value="">
+                            {% endif %}   
+                        </form>
+                        </div>
+
+        
+                    </div>
+                </div>
+
+            
+            
+            
+                
+</body>
+</html>  

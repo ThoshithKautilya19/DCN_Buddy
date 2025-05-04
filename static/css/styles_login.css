@@ -1,0 +1,101 @@
+.img1{
+    z-index: -1;
+    position: absolute;
+    left:30px;
+    top:85px;
+
+}
+
+.img2{
+    z-index: -3;
+    position: absolute;
+    min-height: 60%;
+    max-width: 50%;
+    top:120px;
+    left: 550px;
+}
+
+.container{
+    position: relative;
+    margin-top: 90px;
+    width: 30%;
+    padding: 20px;
+    left: 530px;
+
+}
+
+.item-1,.item-2,.item-3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin: 10px;
+}
+
+h1{
+    font-family: cursive;
+    top:0px ;
+    color: white;
+    text-align: center;
+}
+
+#grad1{
+    background-color: rgb(238,41,57);
+}
+
+#textbox{
+    width: 300px;
+    height: 50px;
+    padding: 1px;
+    border: none;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #f4cd07; /* Primary color */
+    color: #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* Darker shade of primary color on hover */
+}
+
+.submit-button:active {
+    transform: translateY(0.5px); /* Add subtle press effect */
+}
+
+#user,#pass{
+    background-color: white ;
+
+}
+
+.admin{
+    position: relative;
+    bottom: 0px;
+    margin: 10px;
+    
+}
+
+#admin_butt{
+    padding: 10px 20px;
+    background-color: red; /* Primary color */
+    color: #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+#admin_butt:hover{
+    background-color: #0056b3;
+}
+
+#admin_butt:active{
+    transform: rotateY(20deg);
+}

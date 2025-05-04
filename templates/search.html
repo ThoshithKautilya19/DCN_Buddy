@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Nodes</title>
+    <link rel="stylesheet" href="\static\css\styles_search.css">
+</head>
+<body id="bod" >
+             
+                <div class="container">
+                    <div class="box1">
+                    <h1>VI dcn buddy </h1>
+                    </div>
+                    <div class="box-3">
+                            <div class="add">
+                            <form action="/add" method="POST"> 
+                                <input type="submit" name="add" value="Add            " class="submit-button" id="add">
+                                {% if circle is defined %}
+                                <input type="hidden" name="circle" value="{{ circle }}">
+                                <input type="hidden" name="user" value="{{ user }}">
+                        
+                                {% else %}
+                                <input type="hidden" name="circle" value="">
+                                <input type="hidden" name="user" value="">
+                                {% endif %}    
+                            </form>
+                            </div>
+                        
+                            <div class="del">
+                            <form action="/del" method="POST"> 
+                                <input type="submit" name= "del" value="Delete      " class="submit-button" id="del">
+                                {% if circle is defined %}
+                                <input type="hidden" name="circle" value="{{ circle }}">
+                                <input type="hidden" name="user" value="{{ user }}">
+                        
+                                {% else %}
+                                <input type="hidden" name="circle" value="">
+                                <input type="hidden" name="user" value="">
+                                {% endif %}    
+                            </form>
+                            </div>
+                            
+                            <div class="mod">
+                            <form action="/modify" method="POST"> 
+                                <input type="submit" name= "mod" value="Modify      " class="submit-button" id="mod">
+                                {% if circle is defined %}
+                                <input type="hidden" name="circle" value="{{ circle }}">
+                                <input type="hidden" name="user" value="{{ user }}">
+                        
+                                {% else %}
+                                <input type="hidden" name="circle" value="">
+                                <input type="hidden" name="user" value="">
+                                {% endif %}    
+                            </form>
+                            </div>
+                            
+                            <div class="sea">
+                            <form action="/search" method="POST"> 
+                                <input type="submit" name= "search" value="View Node" class="submit-button" id="sea">
+                                {% if circle is defined %}
+                                <input type="hidden" name="circle" value="{{ circle }}">
+                                <input type="hidden" name="user" value="{{ user }}">
+                        
+                                {% else %}
+                                <input type="hidden" name="circle" value="">
+                                <input type="hidden" name="user" value="">
+                                {% endif %}    
+                            </form>
+                            </div>
+                            
+                            <div class="up">
+                            <form action="/upload" method="POST"> 
+                                <input type="submit" name= "upload" value="Upload      " class="submit-button" id="up">
+                                {% if circle is defined %}
+                                <input type="hidden" name="circle" value="{{ circle }}">
+                                <input type="hidden" name="user" value="{{ user }}">
+                        
+                                {% else %}
+                                <input type="hidden" name="circle" value="">
+                                <input type="hidden" name="user" value="">
+                                {% endif %}    
+                            </form>
+                            </div>
+
+                            <div class="expo">
+                                <form action="/export" method="POST">
+                                    <input type="submit" name="export" value="Download " class="submit-button">
+                                    {% if circle is defined %}
+                                    <input type="hidden" name="circle" value="{{ circle }}">
+                                    <input type="hidden" name="user" value="{{ user }}">
+                            
+                                    {% else %}
+                                    <input type="hidden" name="circle" value="">
+                                    <input type="hidden" name="user" value="">
+                                    {% endif %}   
+                                </form>
+                            </div>
+                            <div class="logout">
+                                <form action="/logout" method="POST">
+                                    <input type="submit" name="logout" value="Logout      " class="submit-button">
+                                    {% if circle%}
+                                    <input type="hidden" name="circle" value="{{circle}}">
+                                    <input type="hidden" name="user" value="{{user}}">
+                                    {%endif%}
+                                </form>
+                                </div>
+
+                                <div class="admin">
+                                    <form action="/admin_access" method="POST">
+                                        <input type="submit" name="admin" value="Admin        " class="submit-button">
+                                        {% if circle%}
+                                        <input type="hidden" name="circle" value="{{circle}}">
+                                        <input type="hidden" name="user" value="{{user}}">
+                                        {%endif%}
+                                    </form>
+                                </div>    
+                            </div>
+                    </div>
+                    <div class="box2">
+                    <form method="post" action="/search_row">
+                        <div class="dcn_para">
+                            <div class="desc">
+                            <h2>MW DCN Parameters</h2>
+                            </div>
+                        <div class="textfields">
+                        <div class="tb">
+                            <label for="Circle" style="margin: 2px;">Circle</label>
+                            <input type="text" name="Circle" style="margin: 2px;">
+                        </div>
+                
+                        <div class="tb">
+                            <label for="Site NSS ID" style="margin: 2px;">Site NSS ID</label>
+                            <input type="text" name="Site NSS ID" style="margin: 2px;">
+                        </div>
+                
+                        <div class="tb">
+                            <label for="MW Hop ID" style="margin: 2px;">MW Hop ID</label>
+                            <input type="text" name="MW Hop ID" style="margin: 2px;">
+                        </div>
+                
+                        <div class="tb">
+                            <label for="MW Node ID" style="margin: 2px;">MW Node ID</label>
+                            <input type="text" name="MW Node ID" style="margin: 2px;">
+                        </div>
+                
+                        <div class="tb">
+                            <label for="MW Node Name" style="margin: 2px;">MW Node Name</label>
+                            <input type="text" name="MW Node Name" style="margin: 2px;">
+                        </div>
+                
+                        <div class="tb">
+                            <label for="VLAN" style="margin: 2px;">VLAN</label>
+                            <input type="text" name="VLAN" style="margin: 2px;">
+                        </div>
+                
+                        <div class="tb">
+                            <label for="Node IP" style="margin: 2px;">Node IP</label>
+                            <input type="text" name="Node IP" style="margin: 2px;">
+                        </div>
+                
+                        <div class="tb">
+                            <label for="Subnet Mask" style="margin: 2px;">Subnet Mask</label>
+                            <input type="text" name="Subnet Mask" style="margin: 2px;">
+                        </div>
+                
+                        <div class="tb">
+                            <label for="GNE ID" style="margin: 2px;">GNE ID</label>
+                            <input type="text" name="GNE ID" style="margin: 2px;">
+                        </div>
+                
+                
+                        <div class="tb">
+                            <label for="GNE Name" style="margin: 2px;">GNE Name</label>
+                            <input type="text" name="GNE Name" style="margin: 2px;">
+                        </div>
+                
+                        <div class="tb">
+                            <label for="GNE IP" style="margin: 2px;">GNE IP</label>
+                            <input type="text" name="GNE IP" style="margin: 2px;">
+                        </div>
+                        
+                        <div class="tb">
+                            <label for="GNE Subnet" style="margin: 2px;">GNE Subnet</label>
+                            <input type="text" name="GNE Subnet" style="margin: 2px;">
+                        </div>
+                        </div>
+                        </div>
+                
+                        <br>
+                
+                        <div class="op_mux_para">
+                            <div class="desc">
+                            <h2>Optical Network Parameters</h2>
+                            </div>
+                        <div class="textfields">
+                        <div class="tb">
+                            <label for="MUX ID@GNE" style="margin: 2px;">MUX ID@GNE</label>
+                            <input type="text" name="MUX ID@GNE" style="margin: 2px;">
+                        </div>
+                
+                        <div class="tb">
+                            <label for="MUX Name@GNE" style="margin: 2px;">MUX Name@GNE</label>
+                            <input type="text" name="MUX Name@GNE" style="margin: 2px;">
+                        </div>
+                
+                  
+                        <div class="tb">
+                            <label for="MUX ID@Router" style="margin: 2px;">MUX ID@Router</label>
+                            <input type="text" name="MUX ID@Router" style="margin: 2px;">
+                
+                        </div>
+                
+                     
+                
+                        <div class="tb">
+                            <label for="MUX Name@Router" style="margin: 2px;">MUX Name@Router</label>
+                            <input type="text" name="MUX Name@Router" style="margin: 2px;">
+                        </div>
+                
+                        <div class="tb">
+                            <label for="MUX Port@Router" style="margin: 2px;">MUX Port@Router</label>
+                            <input type="text" name="MUX Port@Router" style="margin: 2px;">
+                
+                        </div>
+                
+                
+                        <div class="tb">
+                            <label for="Main path Service ID" style="margin: 2px;">Main path Service ID</label>
+                            <input type="text" name="Main path Service ID" style="margin: 2px;">
+                        </div>
+                
+                        
+                
+                        <div class="tb">
+                            <label for="Protect path Service ID" style="margin: 2px;">Protect path Service ID</label>
+                            <input type="text" name="Protect path Service ID" style="margin: 2px;">
+                        </div>
+                        </div>
+                        </div>
+                
+                        <br>
+                
+                        <div class="router_para">
+                            <div class="desc">
+                            <h2>IP Network Parameters</h2>
+                            </div>
+                        <div class="textfields">
+                        <div class="tb">
+                            <label for="Router host name" style="margin: 2px;">Router host name</label>
+                            <input type="text" name="Router host name" style="margin: 2px;">
+                        </div>
+                
+                        
+                        <div class="tb">
+                            <label for="Router Loopback IP" style="margin: 2px;">Router Loopback IP</label>
+                            <input type="text" name="Router Loopback IP" style="margin: 2px;">
+                        </div>
+                
+                      
+                
+                        <div class="tb">
+                            <label for="Router Port" style="margin: 2px;">Router Port</label>
+                            <input type="text" name="Router Port" style="margin: 2px;">
+                        </div>
+                
+                      
+                
+                        <div class="tb">
+                            <label for="Protect path Service ID" style="margin: 2px;">Protect path Service ID</label>
+                            <input type="text" name="Protect path Service ID" style="margin: 2px;">
+                        </div>
+                
+                    
+                
+                        <div class="tb">
+                            <label for="Router VLAN" style="margin: 2px;">Router VLAN</label>
+                            <input type="text" name="Router VLAN" style="margin: 2px;">
+                        </div>
+                
+                       
+                
+                        <div class="tb">
+                            <label for="Gateway IP" style="margin: 2px;">Gateway IP</label>
+                            <input type="text" name="Gateway IP" style="margin: 2px;">
+                        </div>
+                
+                
+                        <div class="tb">
+                            <label for="Gateway Subnet" style="margin: 2px;">Gateway Subnet</label>
+                            <input type="text" name="Gateway Subnet" style="margin: 2px;">
+                        </div>
+                
+                
+                        <div class="tb">
+                            <label for="Router VRF" style="margin: 2px;">Router VRF</label>
+                            <input type="text" name="Router VRF" style="margin: 2px;">
+                        </div>
+                        </div>
+                        </div>
+                
+                        <br>
+                        
+                        <div class="serv_det">
+                            <div class="desc">
+                                <h2>Server Details</h2>
+                            </div>
+                        <div class="textfields">
+                        <div class="tb">
+                            <label for="Server Name" style="margin: 2px;">Server Name</label>
+                            <input type="text" name="Server Name" style="margin: 2px;">
+                        </div>
+                
+                
+                        <div class="tb"> 
+                            <label for="Server IP" style="margin: 2px;">Server IP</label>
+                            <input type="text" name="Server IP" style="margin: 2px;">
+                        </div>
+                
+                
+                        <div class="tb">
+                            <label for="Node Status" style="margin: 2px;">Node Status</label>
+                            <input type="text" name="Node Status" style="margin: 2px;">
+                        </div>
+                
+                
+                        <div class="tb">
+                            <label for="Updated Date/Time" style="margin: 2px;">Updated Date/Time</label>
+                            <input type="text" name="Updated Date/Time" style="margin: 2px;">
+                        
+                        </div>
+                
+                
+                        <div class="tb">
+                            <label for="User updated" style="margin: 2px;">User updated</label>
+                            <input type="text" name="User updated" style="margin: 2px;">
+                        </div>
+                        </div>
+                        </div>
+                
+                        <br>
+                        {% if circle is defined %}
+                        <input type="hidden" name="circle" value="{{ circle }}">
+                        <input type="hidden" name="user" value="{{ user }}">
+                
+                        {% else %}
+                        <input type="hidden" name="circle" value="">
+                        <input type="hidden" name="user" value="">
+                        {% endif %}   
+                        <input type="submit" value="SEARCH">
+                    </form>
+                
+                    </div>
+                    </div>
+
+            
+            
+            
+                
+</body>
+</html>  

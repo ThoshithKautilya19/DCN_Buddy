@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Nodes</title>
+    <link rel="stylesheet" href="\static\css\styles_mass_del.css">
+</head>
+<body id="bod" >
+                {% if del_dat %}
+                    <div class="box1">
+                    <h2>These are the rows you want to delete. Are you sure?</h2>
+                    </div>
+                    
+                    <div class="box2">
+                    <table id="data">
+                        <tr>
+                            {% for column_name in cols %}
+                                <th>{{ column_name }}</th>
+                            {% endfor %}
+                            <th>Confirmation</th>
+                        </tr>
+                        {% for row in del_dat %}
+                            <tr>
+                                {% for value in row %}
+                                    <td>{{ value }}</td>
+                                {% endfor %}
+                                <td>
+                                    <form method="POST" action="/del_conf">
+                                        <input type="hidden" name="node_id" value="{{ row[1] }}">
+                                        <input type="submit" value="Delete" id="delete_button">
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    </div>
+                {% endif %}
+    
+                {% if circle is defined %}
+                <input type="hidden" name="circle" value="{{ circle }}">
+                <input type="hidden" name="user" value="{{ user }}">
+        
+                {% else %}
+                <input type="hidden" name="circle" value="">
+                {% endif %}
+   
+</body>
+</html>  
